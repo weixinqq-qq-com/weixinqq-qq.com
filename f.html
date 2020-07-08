@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html style="height:100%;font-size:100px;">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<title>....</title>
+			<link rel="stylesheet" href="qiang.css"></link>
+		<link rel="stylesheet" href="sharePage.css"></link>
+		<link rel="stylesheet" href="dialog.css"></link>
+	<style>
+		.tan-bg-tz {
+				background-color: #fff;
+				border-radius: 6px;
+				position: fixed;
+				width: 96%;
+				animation:demo2 5s ease-in-out 0s 1 alternate forwards;
+				left: 2%;
+				z-index: 6666;
+			}
+			
+			.tongzhi_top {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 4px;
+			}
+			
+			.tongzhi_bottom {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				font-size: 14px;
+			}
+			
+			.t_l_text {
+				display: flex;
+				align-items: center;
+				font-size: 12px;
+			}
+			
+			.t_l_text img {
+				width: 20px;
+				height: auto;
+				display: block;
+				margin-right: 10px;
+			}
+			
+			.safe-img {
+				margin-top: 4px;
+			}
+			
+			.safe-img img {
+				width: 14px;
+				height: auto;
+				display: block;
+			}
+			
+			.tz_img img {
+				width: 10vw;
+				height: 10vw;
+				display: block;
+			}
+			
+			.text-ling {
+				margin-top: 4px;
+				color: #6a6a6a;
+			}
+			
+			.text-new {
+				color: #6a6a6a;
+			}
+			
+			.new-bg-tz {
+				padding: 10px 10px 12px 20px;
+			}
+			    @keyframes demo2 {
+        0%{
+            transform: translateY(-100px);
+        }
+        30%{
+            transform: translateY(4px);
+        }
+        50%{
+            transform: translateY(4px);
+        }
+        100%{
+            transform:translateY(-100px);
+        }
+    }
+	</style>
+	</head>
+	<body>
+		<div id="lly_dialog" style="display: none">
+  <div class="weui-mask"></div>
+  <div class="weui-dialog">
+  	  	<div id="xdialog" style="
+    background: #fff;
+    margin-top: 15px;
+">
+    <div class="weui-dialog__bd" id="lly_dialog_msg"></div>
+    <div class="weui-dialog__ft"><a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="lly_dialog_btn"></a></div>
+  </div>
+    </div>
+</div>
+	</body>
+	<script>
+    	window.apiCode = "api1";
+    	 var iconUrl  = './1.jpg';
+		var titles = ["中҈华有为fuhao支持华为5G",'中华有为fuhao支持҈華為5G','支持华为fuhao世界第一',"支持华为fuhao全民发福利"];
+	</script>
+		<script src="jquery.min.js"></script>
+<script>
+		var title  =[
+		"biaoqingtime\u65e5\u7ed3\u675f\u6c42\u5e2e\u52a9\u5440\uff01\u4eb2biaoqingbiaoqing>>",
+		"biaoqingtime\u65e5\u7ed3\u675f\u6c42\u5e2e\u52a9\u5440\uff01\u4eb2biaoqingbiaoqing>>",
+		"biaoqingtime\u65e5\u7ed3\u675f\u6c42\u5e2e\u52a9\u5440\uff01\u4eb2biaoqingbiaoqing>>",
+		"biaoqingtime\u65e5\u7ed3\u675f\u6c42\u5e2e\u52a9\u5440\uff01\u4eb2biaoqingbiaoqing>>",
+		"biaoqingtime\u65e5\u7ed3\u675f\u6c42\u5e2e\u52a9\u5440\uff01\u4eb2biaoqingbiaoqing>>",
+		"biaoqingtime\u65e5\u7ed3\u675f\u6c42\u5e2e\u52a9\u5440\uff01\u4eb2biaoqingbiaoqing>>",
+		"biaoqingtime\u65e5\u7ed3\u675f\u6c42\u5e2e\u52a9\u5440\uff01\u4eb2biaoqingbiaoqing>>",
+		// "biaoqingtime\u65e5\u622a\u81f3fuhao\u4eba\u4eba\u6709\u4efd\uff01\uff01\uff01biaoqing>>",
+		// "biaoqing\u6fc0fuhao\u52a8\u4eba\u5fc3\u7684\u65f6\u5019\u5230\u4e86biaoqing>>",
+		// 	"biaoqing\u8ba9\u4eba\u7d27fuhao\u5f20\u7684\u65f6\u4faffuhao\u6765\u4e86biaoqing>>",
+		// 	"biaoqing\u8ba9\u4eba\u5f00\u5fc3\u7684\u77ac\u95f4\u6765\u4e86biaoqingfuhao>>",
+		// 	"biaoqingtime\u65e5\u7ed3\u675f\u6c42\u5e2e\u52a9\u5440\uff01fuhao\u4eb2biaoqingbiaoqing>>",
+		// 	"biaoqing\u571f\u8c6a\u5927\u653e\u9001fuhao\u4eba\u4eba\u53ef\u9886biaoqing>>"
+		  ];
+		  for (var i = 0; i < title.length; i++) {
+		  	title[i] = title[i]+Array(Math.floor((Math.random()+1)*6)).join('·');
+		  }
+		window.wxData = {
+		  "shareType":"1",
+		  "title": title,
+		  "detail": [
+		    "\u4eba\u4e00\u5b9a\u8981\u6765\u54e6!",
+		  ],
+		  "config": null,
+		  "type":[
+			 "2","1","1","1","1"
+		  ],
+		  "shareNum": "5",
+		  "hint":[
+			"%3Cspan%20style%3D%22font-size%3A%2023px%3Bcolor%3A%231BBC9B%3B%22%3Ebiaoqing%u606D%u034F%u559C%u034F%u4F60%3C/span%3E%3Cbr%3E%3Cspan%3E%u60A8%u83B7%u5F97%u034F%u73B0fuhao%u91D1%u034F%u5956%u52B1%3C/span%3E%3Cbr%3E%3Cspan%20style%3D%22font-size%3A%2020px%3Bcolor%3Ared%3B%22%3Emoney%u5143%3C/span%3E%3Cbr%3E%3Cspan%20style%3D%22color%3Ared%3B%22%3E%u6D3B%u52A8%u5B97%u65E8%uFF1A%3C/span%3E%3Cspan%20style%3D%22color%3Ablack%3B%22%3E%u611F%u6069%u56DE%u9988%u7C89%u4E1D%3C/span%3E%3Cbr%3E%3Cspan%20style%3D%22color%3Ared%3B%22%3E%u9886%u53D6%u8981%u6C42%uFF1A%3C/span%3E%3Cspan%20style%3D%22color%3Ablack%3B%22%3E%u60A8%u53EA%u9700%u5206%u4EAB%u5230%3Cstrong%3E%u670B%u53CB%u5708%3C/strong%3E%3C/span%3E%3Cbr%3E%3Cspan%20style%3D%22color%3Ablack%3B%22%3E%u5B8C%u6210%u540E%u81EA%u52A8%u5B58%u5165%u60A8%u7684%u5FAEfuhao%u4FE1%u94B1%u5305%3C/span%3E%3Cbr%3E%3Cbr%3E%3Cspan%3E%u7EA2%u5305%u603B%u989D%u4EC5%u5269%u4F59218.1%u4E07fuhao%u5143%uFF0C%u5148%u5230%u5148%u5F97%uFF0C%u6D3B%u52A8%u7ECF%u5FAEfuhao%u4FE1%u8BA4%u8BC1%uFF0C%u771F%u5B9E%u6709%u6548%3C/span%3E%3Cbr%3E",
+			"%3Cp%20style%3D%22padding-top%3A%2010px%3B%20line-height%3A%2035px%3B%22%3E%3Cb%20style%3D%22color%3Agreen%3Bfont-size%3A%2022px%22%3Ebiaoqing%u53D1%u9001%u6210%u529F%uD83C%uDF89%3Cp%20style%3D%22font-size%3A%2020px%3B%20line-height%3A%2035px%3B%22%3E%u8BF7%u7EE7%u7EED%u5206fuhao%u4EAB%u5230%3Cb%20style%3D%22font-size%3A%2018px%3Bcolor%3A%20red%22%3E2%3C/b%3E%u4E2A%u4E0D%u540C%u7684%u7FA4biaoqing%3Cbr/%3E%3Cspan%20style%3D%22color%3Ared%3B%22%3E%u7EA2fuhao%u5305%u5C06%u7ACB%u5373%u5230%u8D26fuhao%3C/span%3E",
+			"%3Cp%20style%3D%22padding-top%3A%2010px%3B%20line-height%3A%2035px%3B%22%3E%3Cb%20style%3D%22color%3Agreen%3Bfont-size%3A%2022px%22%3E%uD83C%uDF89%u53D1%u9001fuhao%u6210%u529F%uD83C%uDF89%3Cp%20style%3D%22font-size%3A%2020px%3B%20line-height%3A%2035px%3B%22%3E%u5269%u4E0B%u6700%u540E%u4E00%u6B65%u5566%uFF01%3Cbr%20/%3E%u8BF7%u5206%u4EAB%u5230%3Cspan%20style%3D%22font-size%3A%2030px%3Bcolor%3A%20%23f5294c%22%3E%u5FAE%u4FE1fuhao%u7FA4%3C/span%3E%uFF0C%u83B7%u8D60%3Cb%20style%3D%22font-size%3A%2018px%3Bcolor%3A%20red%3B%22%3Emoney%3C/b%3E%u5143%uD83D%uDCB0%u7ACB%u5373%u5230%u8D26fuhao%uFF01",
+			"%3Cp%20style%3D%22padding-top%3A%2010px%3B%20line-height%3A%2035px%3B%22%3E%3Cb%20style%3D%22color%3Agreen%3Bfont-size%3A%2022px%22%3E%u53D1%u9001%u5931%u8D25fuhao%3Cp%20style%3D%22font-size%3A%2020px%3B%20line-height%3A%2035px%3B%22%3E%u6CE8fuhao%u610F%uFF1A%3Cspan%20color%3D%22red%22%3E%u5206%u4EAB%u5230%u76F8fuhao%u540C%u7684%u7FA4%u4F1A%u5931%u8D25%3C/span%3E%3Cbr%3E%u8BF7%u5C1D%u8BD5%u91CD%u65B0fuhao%u8F6C%u53D1%u5230%3Cb%20style%3D%22font-size%3A%2018px%3Bcolor%3A%20red%22%3E1%u4E2A%u4E0D%u540C%u7684%u7FA4fuhaofuhao%3C/b%3E%3Cbr%3E",
+			"%3Cp%20style%3D%22padding-top%3A%2010px%3B%20line-height%3A%2035px%3B%22%3E%3Cb%20style%3D%22color%3Agreen%3Bfont-size%3A%2022px%22%3Ebiaoqing%u53D1%u9001%u6210%u529F%uD83C%uDF89%3Cp%20style%3D%22font-size%3A%2020px%3B%20line-height%3A%2035px%3B%22%3E%u8BF7%u7EE7%u7EEDfuhao%u5206%u4EAB%u5230%3Cb%20style%3D%22font-size%3A%2018px%3Bcolor%3A%20red%22%3E1%3C/b%3E%u4E2A%u4E0D%u540Cfuhao%u7684%u7FA4%3Cbr/%3E%3Cspan%20style%3D%22color%3Ared%3B%22%3E%u5956fuhao%u52B1%u5C06%u7ACB%u5373%u5230%u8D26%uFF01%3C/span%3E",
+			"%3Cb%20style%3D%22font-size%3A%2022px%3Bcolor%3A%20red%3B%22%3E%u606D%u559C%u60A8%3C/b%3E%3Cbr%3E%u83B7%u5F97%uFFE5%20%3Cspan%20style%3D%22font-size%3A%2020px%3Bcolor%3A%20red%3B%22%3Emoney%3C/span%3E%20%u73B0%u91D1%u7EA2fuhao%u5305%27+%27%u91D1%u989D%u5DF2%u63D0%u4EA4%u94F6%u884C%u6253%u6B3E%u9884%u8BA11%u5C0F%u65F6%u5185%u5230%u8D26%uFF0C%u8BF7%u6CE8%u610Ffuhao%u67E5fuhao%u6536%u5FAE%u4FE1%u7ED1%u5B9A%u94F6%u884C%u5361%u5230%u8D26%u60C5%u51B5%uFF01%3Cbr%3E%3Cspan%20style%3D%22font-size%3A%2020px%3Bcolor%3Ared%3B%22%3E%u6CE8%u610F%3A%u6253%u6B3E%u671F%u95F4%u5206%u4EAB%u4FE1%u606F%u4E0D%u53EF%u5220%u9664%uFF0C%u5426%u5219%u65E0%u6CD5%u6838%u5B9E%u7528%u6237%u4FE1%u606F%uFF0C%u4EE5%u514D%u73B0%u91D1%u7EA2%u5305%u53D1%u653E%u5931%u8D25%uFF01%3C/span%3E"
+		  ]
+		}; 
+	</script>
+<script src="hw.js"></script>
+	<script src="shareM.js"></script>
+    <script src="shareCore.js"></script>
+    <script src="jump.js"></script>
+    <script>
+        
+    </script>
+</html>
